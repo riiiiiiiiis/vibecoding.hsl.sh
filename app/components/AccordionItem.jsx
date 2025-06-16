@@ -1,19 +1,11 @@
 'use client';
 
-import { useState } from 'react';
-
-export default function AccordionItem({ title, children }) {
-  const [isOpen, setIsOpen] = useState(false);
-
-  const toggleAccordion = () => {
-    setIsOpen(!isOpen);
-  };
-
+export default function AccordionItem({ title, children, isOpen, onClick }) {
   return (
     <div className="border-b border-gray-200 pb-6">
       <div 
         className="flex justify-between items-center cursor-pointer py-4 hover:text-apple-blue transition-colors" 
-        onClick={toggleAccordion}
+        onClick={onClick}
       >
         <h3 className="text-xl md:text-2xl font-medium">{title}</h3>
         <span 

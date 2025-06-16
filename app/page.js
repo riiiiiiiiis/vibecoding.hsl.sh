@@ -1,11 +1,11 @@
 // app/page.js
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
-import About from './components/About';
+import LeadMagnet from './components/LeadMagnet';
+import Testimonials from './components/Testimonials';
+import StudentProjects from './components/StudentProjects';
 import Program from './components/Program';
 import Pricing from './components/Pricing';
-import Audience from './components/Audience';
-import FAQ from './components/FAQ';
 import CTA from './components/CTA';
 import Footer from './components/Footer';
 
@@ -15,11 +15,11 @@ export default function Home() {
       <Navbar />
       <main>
         <Hero />
-        <About />
+        <LeadMagnet />
+        <Testimonials />
+        <StudentProjects />
         <Program />
         <Pricing />
-        <Audience />
-        <FAQ />
         <CTA />
       </main>
       <Footer />

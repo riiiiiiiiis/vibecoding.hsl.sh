@@ -6,26 +6,18 @@ import "./globals.css";
 const structuredData = {
   "@context": "https://schema.org",
   "@type": "Course",
-  "name": "Вайб-кодинг с AI: Создание сайтов и Telegram-ботов",
-  "description": "3-недельный практический интенсив по созданию веб-сайтов и Telegram-ботов с помощью AI инструментов",
-  "provider": { "@type": "Person", "name": "Сережа Рис", "url": "https://t.me/r1iiis" },
+  "name": "Вайб-кодинг с AI",
+  "description": "Практический интенсив по созданию сайтов и Telegram-ботов с помощью AI",
+  "provider": { "@type": "Person", "name": "Сережа Рис" },
   "instructor": { "@type": "Person", "name": "Сережа Рис" },
   "courseMode": "online",
-  "educationalLevel": "Beginner",
-  "teaches": ["Создание сайтов с помощью AI", "Разработка Telegram-ботов", "Работа с ChatGPT и Claude", "Промпт-инжиниринг"],
-  "startDate": "2024-05-30",
-  "duration": "P21D",
-  "offers": [
-    { "@type": "Offer", "price": "2990", "priceCurrency": "RUB", "name": "Самостоятельный" },
-    { "@type": "Offer", "price": "12000", "priceCurrency": "RUB", "name": "Стандартный" },
-    { "@type": "Offer", "price": "24000", "priceCurrency": "RUB", "name": "VIP" }
-  ]
+  "educationalLevel": "Beginner"
 };
 
 export const metadata = {
   title: "Вайб-кодинг с AI: Создавай сайты и Telegram-ботов в чате с ИИ | Сережа Рис",
-  description: "3-недельный интенсив с Сережей Рисом. Создавай сайты и Telegram-ботов через чат с AI. Старт 30 мая. 3 практические лекции. Без опыта программирования.",
-  keywords: ["AI", "вайб-кодинг", "создание сайтов", "telegram бот", "ChatGPT", "Claude", "веб-разработка", "без кода", "Сережа Рис", "интенсив"],
+  description: "Научись создавать сайты и Telegram-ботов через чат с AI. Практический интенсив от Сережи Риса для начинающих. Получи бесплатный гайд и начни кодить уже сегодня!",
+  keywords: ["AI", "вайб-кодинг", "создание сайтов", "telegram бот", "ChatGPT", "Claude", "веб-разработка", "без кода", "Сережа Рис", "интенсив", "обучение ИИ"],
   author: [{ name: "Сережа Рис" }],
   robots: "index, follow",
   themeColor: "#0071e3",
@@ -35,7 +27,7 @@ export const metadata = {
     type: "website",
     url: "https://school.hsl.sh/",
     title: "Вайб-кодинг с AI: Создавай сайты и Telegram-ботов в чате с ИИ",
-    description: "3-недельный интенсив с Сережей Рисом. Создавай сайты и Telegram-ботов через чат с AI. Старт 30 мая. Без опыта программирования.",
+    description: "Научись создавать сайты и Telegram-ботов через чат с AI. Практический интенсив от Сережи Риса для начинающих.",
     images: [{ url: "https://school.hsl.sh/og-image.jpg", width: 1200, height: 630 }],
     siteName: "Вайб-кодинг с AI",
     locale: "ru_RU",
@@ -44,7 +36,7 @@ export const metadata = {
     card: "summary_large_image",
     url: "https://school.hsl.sh/",
     title: "Вайб-кодинг с AI: Создавай сайты и Telegram-ботов в чате с ИИ",
-    description: "3-недельный интенсив с Сережей Рисом. Создавай сайты и Telegram-ботов через чат с AI. Старт 30 мая.",
+    description: "Научись создавать сайты и Telegram-ботов через чат с AI. Практический интенсив от Сережи Риса для начинающих.",
     images: ["https://school.hsl.sh/og-image.jpg"],
     creator: "@r1iiis",
   },
