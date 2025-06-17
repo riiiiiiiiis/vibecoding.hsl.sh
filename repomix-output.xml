@@ -42,16 +42,16 @@ The content is organized as follows:
 <directory_structure>
 app/
   components/
-    About.jsx
     AccordionItem.jsx
-    Audience.jsx
     CTA.jsx
-    FAQ.jsx
     Footer.jsx
     Hero.jsx
+    LeadMagnet.jsx
     Navbar.jsx
     Pricing.jsx
     Program.jsx
+    StudentProjects.jsx
+    Testimonials.jsx
   globals.css
   layout.js
   page.js
@@ -67,27 +67,27 @@ README.md
 <files>
 This section contains the contents of the repository's files.
 
-<file path="app/components/About.jsx">
-export default function About() {
+<file path="app/components/LeadMagnet.jsx">
+export default function LeadMagnet() {
   return (
-    <section id="about" className="py-20">
-      <div className="max-w-6xl mx-auto px-6">
-        <p className="text-center text-apple-gray text-xl mb-2">Когда и как проходит</p>
-        <h2 className="text-center text-5xl font-semibold mb-14">Практический интенсив</h2>
-        
-        <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-          <div className="bg-apple-light-gray rounded-3xl p-10 relative overflow-hidden group hover:-translate-y-2 transition-all duration-300">
-            <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-600 opacity-0 group-hover:opacity-5 transition-opacity duration-300"></div>
-            <div className="text-6xl font-bold text-apple-gray/20 mb-4">30</div>
-            <h3 className="text-2xl font-semibold mb-4">Старт 30 мая</h3>
-            <p className="text-apple-gray text-lg leading-relaxed">3 недели интенсивного обучения с практическими заданиями и моей поддержкой.</p>
-          </div>
-          <div className="bg-apple-light-gray rounded-3xl p-10 relative overflow-hidden group hover:-translate-y-2 transition-all duration-300">
-            <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-600 opacity-0 group-hover:opacity-5 transition-opacity duration-300"></div>
-            <div className="text-6xl font-bold text-apple-gray/20 mb-4">03</div>
-            <h3 className="text-2xl font-semibold mb-4">3 практические лекции</h3>
-            <p className="text-apple-gray text-lg leading-relaxed">Онлайн-встречи с живой демонстрацией, где ты создашь реальные проекты от сайтов до Telegram-ботов.</p>
-          </div>
+    <section id="lead-magnet" className="py-20 bg-gradient-to-b from-apple-light-gray to-white">
+      <div className="max-w-4xl mx-auto px-6 text-center">
+        <h2 className="text-5xl font-semibold mb-6">Начни вайб-кодить за 15 минут!</h2>
+        <p className="text-xl text-apple-gray mb-8 max-w-2xl mx-auto">
+          Скачай бесплатный гайд и создай свой первый сайт с помощью AI уже сегодня. 
+          Никаких сложных настроек — только практика и результат.
+        </p>
+        <div className="bg-white rounded-3xl p-8 shadow-lg border border-gray-100 max-w-md mx-auto">
+          <h3 className="text-2xl font-semibold mb-4">Бесплатный гайд</h3>
+          <p className="text-apple-gray mb-6">
+            «15 минут до первого сайта: пошаговое руководство по вайб-кодингу с AI»
+          </p>
+          <a 
+            href="#pricing" 
+            className="block w-full py-4 bg-apple-blue text-white rounded-xl text-lg font-medium hover:bg-blue-600 transition-all hover:-translate-y-1 shadow-lg hover:shadow-xl"
+          >
+            Получить бесплатно
+          </a>
         </div>
       </div>
     </section>
@@ -95,396 +95,141 @@ export default function About() {
 }
 </file>
 
-<file path="app/components/AccordionItem.jsx">
-'use client';
-
-import { useState } from 'react';
-
-export default function AccordionItem({ title, children }) {
-  const [isOpen, setIsOpen] = useState(false);
-
-  const toggleAccordion = () => {
-    setIsOpen(!isOpen);
-  };
-
+<file path="app/components/StudentProjects.jsx">
+export default function StudentProjects() {
   return (
-    <div className="border-b border-gray-200 pb-6">
-      <div 
-        className="flex justify-between items-center cursor-pointer py-4 hover:text-apple-blue transition-colors" 
-        onClick={toggleAccordion}
-      >
-        <h3 className="text-xl md:text-2xl font-medium">{title}</h3>
-        <span 
-          className="text-2xl text-apple-gray transition-transform duration-300" 
-          style={{ transform: isOpen ? 'rotate(45deg)' : 'rotate(0deg)' }}
-        >
-          +
-        </span>
-      </div>
-      <div 
-        className="overflow-hidden transition-all duration-300"
-        style={{ maxHeight: isOpen ? '1000px' : '0' }}
-      >
-        <div className="pt-4 text-apple-gray leading-relaxed">
-          {children}
+    <section className="py-20 bg-apple-light-gray">
+      <div className="max-w-6xl mx-auto px-6">
+        <h2 className="text-center text-5xl font-semibold mb-16">Реальные проекты наших учеников</h2>
+        
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="bg-white rounded-3xl p-6 hover:-translate-y-2 transition-all duration-300 shadow-sm hover:shadow-lg">
+            <div className="bg-gradient-to-br from-blue-100 to-purple-100 rounded-2xl h-48 mb-6 flex items-center justify-center">
+              <span className="text-4xl">🏪</span>
+            </div>
+            <h3 className="text-xl font-semibold mb-3">Интернет-магазин одежды</h3>
+            <p className="text-apple-gray mb-4">Полноценный e-commerce с корзиной, каталогом товаров и интеграцией с платежами.</p>
+            <div className="flex items-center gap-2">
+              <span className="bg-blue-100 text-blue-600 px-3 py-1 rounded-full text-sm">React</span>
+              <span className="bg-purple-100 text-purple-600 px-3 py-1 rounded-full text-sm">ChatGPT</span>
+            </div>
+          </div>
+
+          <div className="bg-white rounded-3xl p-6 hover:-translate-y-2 transition-all duration-300 shadow-sm hover:shadow-lg">
+            <div className="bg-gradient-to-br from-green-100 to-blue-100 rounded-2xl h-48 mb-6 flex items-center justify-center">
+              <span className="text-4xl">🤖</span>
+            </div>
+            <h3 className="text-xl font-semibold mb-3">Telegram-бот для записи</h3>
+            <p className="text-apple-gray mb-4">Автоматизированная система записи клиентов с календарем и напоминаниями.</p>
+            <div className="flex items-center gap-2">
+              <span className="bg-green-100 text-green-600 px-3 py-1 rounded-full text-sm">Python</span>
+              <span className="bg-blue-100 text-blue-600 px-3 py-1 rounded-full text-sm">Claude</span>
+            </div>
+          </div>
+
+          <div className="bg-white rounded-3xl p-6 hover:-translate-y-2 transition-all duration-300 shadow-sm hover:shadow-lg">
+            <div className="bg-gradient-to-br from-yellow-100 to-orange-100 rounded-2xl h-48 mb-6 flex items-center justify-center">
+              <span className="text-4xl">📱</span>
+            </div>
+            <h3 className="text-xl font-semibold mb-3">Портфолио-сайт</h3>
+            <p className="text-apple-gray mb-4">Современный адаптивный сайт-портфолио с анимациями и контактной формой.</p>
+            <div className="flex items-center gap-2">
+              <span className="bg-yellow-100 text-yellow-600 px-3 py-1 rounded-full text-sm">Next.js</span>
+              <span className="bg-orange-100 text-orange-600 px-3 py-1 rounded-full text-sm">AI Studio</span>
+            </div>
+          </div>
+        </div>
+        
+        <div className="text-center mt-12">
+          <p className="text-xl text-apple-gray mb-6">Все эти проекты созданы за время интенсива!</p>
+          <a href="#program" className="inline-block bg-apple-blue text-white px-8 py-4 rounded-full text-lg hover:bg-blue-600 transition-all hover:-translate-y-1 shadow-lg hover:shadow-xl">
+            Посмотреть программу
+          </a>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 </file>
 
-<file path="app/components/Audience.jsx">
-export default function Audience() {
+<file path="app/components/Testimonials.jsx">
+export default function Testimonials() {
   return (
-    <section id="audience" className="py-20">
+    <section id="testimonials" className="py-20">
       <div className="max-w-6xl mx-auto px-6">
-        <h2 className="text-center text-5xl font-semibold mb-16">Для кого этот курс</h2>
+        <h2 className="text-center text-5xl font-semibold mb-16">Что говорят вайб-кодеры</h2>
         
         <div className="grid md:grid-cols-3 gap-8">
           <div className="bg-apple-light-gray rounded-3xl p-8 hover:-translate-y-2 transition-all duration-300">
-            <h3 className="text-2xl font-semibold mb-4">Начинающих без опыта</h3>
-            <p className="text-apple-gray leading-relaxed">Если ты всегда хотел создавать сайты или приложения, но боялся сложности программирования.</p>
+            <div className="mb-6">
+              <div className="flex items-center gap-1 mb-4">
+                {[...Array(5)].map((_, i) => (
+                  <span key={i} className="text-yellow-400 text-xl">★</span>
+                ))}
+              </div>
+              <p className="text-apple-gray leading-relaxed mb-4">
+                "За неделю создал свой первый лендинг и Telegram-бота! Раньше думал, что программирование — это слишком сложно."
+              </p>
+            </div>
+            <div className="flex items-center gap-3">
+              <div className="w-12 h-12 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full flex items-center justify-center text-white font-semibold">
+                А
+              </div>
+              <div>
+                <p className="font-semibold">Алексей</p>
+                <p className="text-sm text-apple-gray">Предприниматель</p>
+              </div>
+            </div>
           </div>
+
           <div className="bg-apple-light-gray rounded-3xl p-8 hover:-translate-y-2 transition-all duration-300">
-            <h3 className="text-2xl font-semibold mb-4">Дизайнеров и креаторов</h3>
-            <p className="text-apple-gray leading-relaxed">Кто хочет быстро прототипировать свои идеи и оживлять дизайны без привлечения разработчиков.</p>
+            <div className="mb-6">
+              <div className="flex items-center gap-1 mb-4">
+                {[...Array(5)].map((_, i) => (
+                  <span key={i} className="text-yellow-400 text-xl">★</span>
+                ))}
+              </div>
+              <p className="text-apple-gray leading-relaxed mb-4">
+                "Сережа объясняет так просто! Теперь я могу создавать прототипы для своих дизайнов без помощи разработчиков."
+              </p>
+            </div>
+            <div className="flex items-center gap-3">
+              <div className="w-12 h-12 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full flex items-center justify-center text-white font-semibold">
+                М
+              </div>
+              <div>
+                <p className="font-semibold">Мария</p>
+                <p className="text-sm text-apple-gray">UX/UI дизайнер</p>
+              </div>
+            </div>
           </div>
+
           <div className="bg-apple-light-gray rounded-3xl p-8 hover:-translate-y-2 transition-all duration-300">
-            <h3 className="text-2xl font-semibold mb-4">Предпринимателей</h3>
-            <p className="text-apple-gray leading-relaxed">Кто хочет самостоятельно создавать MVP, лендинги и простые веб-инструменты для своего бизнеса.</p>
+            <div className="mb-6">
+              <div className="flex items-center gap-1 mb-4">
+                {[...Array(5)].map((_, i) => (
+                  <span key={i} className="text-yellow-400 text-xl">★</span>
+                ))}
+              </div>
+              <p className="text-apple-gray leading-relaxed mb-4">
+                "Интенсив полностью изменил мое представление о разработке. Вайб-кодинг — это будущее!"
+              </p>
+            </div>
+            <div className="flex items-center gap-3">
+              <div className="w-12 h-12 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full flex items-center justify-center text-white font-semibold">
+                Д
+              </div>
+              <div>
+                <p className="font-semibold">Дмитрий</p>
+                <p className="text-sm text-apple-gray">Маркетолог</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </section>
   );
 }
-</file>
-
-<file path="app/components/CTA.jsx">
-export default function CTA() {
-  return (
-    <section id="apply" className="py-24 bg-gradient-to-br from-blue-600 via-purple-600 to-blue-700 text-white text-center relative overflow-hidden">
-      <div className="absolute inset-0 bg-black/10"></div>
-      <div className="max-w-2xl mx-auto px-6 relative z-10">
-        <h2 className="text-5xl font-semibold mb-6">Готовы начать творить с AI?</h2>
-        <p className="text-2xl mb-10 opacity-90">Забронируй место через Telegram-бот или напиши мне в личку, если остались вопросы.</p>
-        
-        <div className="space-y-6">
-          <a href="https://t.me/hashslash_bot" target="_blank" rel="noopener noreferrer" className="block max-w-md mx-auto py-4 px-8 bg-apple-black text-white rounded-2xl text-lg font-medium hover:-translate-y-1 transition-all hover:shadow-2xl text-center">Забронировать в Telegram-боте</a>
-          <p className="text-lg opacity-90">
-            Есть вопросы? Пиши мне в личку: <a href="https://t.me/r1iiis" target="_blank" rel="noopener noreferrer" className="underline hover:no-underline font-medium">@r1iiis</a>
-          </p>
-        </div>
-      </div>
-    </section>
-  );
-}
-</file>
-
-<file path="app/components/FAQ.jsx">
-'use client';
-
-import AccordionItem from './AccordionItem';
-
-export default function FAQ() {
-  return (
-    <section className="py-20 bg-apple-light-gray">
-      <div className="max-w-4xl mx-auto px-6">
-        <p className="text-center text-apple-gray text-xl mb-2">Вопросы и ответы</p>
-        <h2 className="text-center text-5xl font-semibold mb-16">Часто задаваемые вопросы</h2>
-        
-        <div className="max-w-3xl mx-auto space-y-4">
-          <AccordionItem title="Сколько длится интенсив?">
-            <p>3 недели с тремя практическими онлайн-лекциями. Также будут доступны записи всех занятий и дополнительные материалы.</p>
-          </AccordionItem>
-
-          <AccordionItem title="Нужны ли предварительные знания?">
-            <p>Нет, курс рассчитан на новичков. Я начну с самых основ и покажу, как создавать веб-сайты, даже если ты никогда не писал код.</p>
-          </AccordionItem>
-
-          <AccordionItem title="Какие инструменты мы будем использовать?">
-            <p>В основном это ChatGPT, Claude и Google AI Studio. Большинство из них имеют бесплатные версии для начала работы. Мы также покажем, как публиковать сайты с помощью Netlify Drop.</p>
-          </AccordionItem>
-        </div>
-      </div>
-    </section>
-  );
-}
-</file>
-
-<file path="app/components/Footer.jsx">
-export default function Footer() {
-  return (
-    <footer className="bg-apple-light-gray py-16">
-      <div className="max-w-6xl mx-auto px-6">
-        <div className="grid md:grid-cols-4 gap-10 mb-10">
-          <div>
-            <h5 className="text-sm font-semibold mb-4 text-apple-black">Вайб-кодинг с AI</h5>
-            <p className="text-apple-gray text-sm leading-relaxed">Создавайте будущее веб-разработки вместе с нами.</p>
-          </div>
-          <div>
-            <h5 className="text-sm font-semibold mb-4 text-apple-black">Навигация</h5>
-            <ul className="space-y-3">
-              <li><a href="#about" className="text-apple-gray text-sm hover:text-apple-blue transition-colors">О курсе</a></li>
-              <li><a href="#program" className="text-apple-gray text-sm hover:text-apple-blue transition-colors">Программа</a></li>
-              <li><a href="#pricing" className="text-apple-gray text-sm hover:text-apple-blue transition-colors">Тарифы</a></li>
-              <li><a href="#audience" className="text-apple-gray text-sm hover:text-apple-blue transition-colors">Для кого</a></li>
-            </ul>
-          </div>
-          <div>
-            <h5 className="text-sm font-semibold mb-4 text-apple-black">Инструменты</h5>
-            <ul className="space-y-3">
-              <li><a href="https://chat.openai.com/" target="_blank" rel="noopener noreferrer" className="text-apple-gray text-sm hover:text-apple-blue transition-colors">ChatGPT</a></li>
-              <li><a href="https://claude.ai/" target="_blank" rel="noopener noreferrer" className="text-apple-gray text-sm hover:text-apple-blue transition-colors">Claude</a></li>
-              <li><a href="https://aistudio.google.com/" target="_blank" rel="noopener noreferrer" className="text-apple-gray text-sm hover:text-apple-blue transition-colors">Google AI Studio</a></li>
-              <li><a href="https://app.netlify.com/drop" target="_blank" rel="noopener noreferrer" className="text-apple-gray text-sm hover:text-apple-blue transition-colors">Netlify Drop</a></li>
-            </ul>
-          </div>
-          <div>
-            <h5 className="text-sm font-semibold mb-4 text-apple-black">Связь</h5>
-            <ul className="space-y-3">
-              <li><a href="https://t.me/hashslash_bot" target="_blank" rel="noopener noreferrer" className="text-apple-gray text-sm hover:text-apple-blue transition-colors">Telegram-бот для записи</a></li>
-              <li><a href="https://t.me/r1iiis" target="_blank" rel="noopener noreferrer" className="text-apple-gray text-sm hover:text-apple-blue transition-colors">Личка @r1iiis</a></li>
-            </ul>
-          </div>
-        </div>
-        <div className="pt-10 border-t border-gray-200 text-center">
-          <p className="text-apple-gray text-sm">© 2025 хсл щ<br />
-          <a href="#" className="text-apple-gray hover:text-apple-blue transition-colors">Политика обработки персональных данных</a> | 
-          <a href="#" className="text-apple-gray hover:text-apple-blue transition-colors">Публичная оферта</a></p>
-        </div>
-      </div>
-    </footer>
-  );
-}
-</file>
-
-<file path="app/components/Hero.jsx">
-export default function Hero() {
-  return (
-    <section className="pt-32 pb-20 text-center bg-gradient-to-b from-white to-apple-light-gray">
-      <div className="max-w-4xl mx-auto px-6">
-        <p className="text-apple-gray text-lg mb-2">Практический курс-интенсив</p>
-        <h1 className="text-6xl md:text-7xl font-semibold mb-6 bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent leading-tight">Вайб-кодинг с AI</h1>
-        <p className="text-2xl md:text-3xl text-apple-gray mb-10 leading-relaxed max-w-3xl mx-auto">Создавайте сайты и приложения в чате с искусственным интеллектом. Просто опишите идею — ИИ напишет код, настроит дизайн и поможет опубликовать результат</p>
-        <div className="flex justify-center gap-3 mb-10 flex-wrap">
-          <span className="bg-black/5 px-4 py-2 rounded-full text-sm backdrop-blur-sm">Для начинающих</span>
-          <span className="bg-black/5 px-4 py-2 rounded-full text-sm backdrop-blur-sm">Быстрый старт</span>
-          <span className="bg-black/5 px-4 py-2 rounded-full text-sm backdrop-blur-sm">AI-инструменты</span>
-        </div>
-        <a href="#apply" className="inline-block bg-apple-blue text-white px-8 py-4 rounded-full text-lg hover:bg-blue-600 transition-all hover:-translate-y-1 shadow-lg hover:shadow-xl hover:shadow-blue-200">Узнать больше и записаться</a>
-      </div>
-    </section>
-  );
-}
-</file>
-
-<file path="app/components/Navbar.jsx">
-export default function Navbar() {
-  return (
-    <nav className="fixed top-0 w-full backdrop-blur-md bg-white/80 z-50">
-      <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
-        <a href="#" className="text-xl font-semibold text-apple-black">Вайб-кодинг</a>
-        <ul className="hidden md:flex space-x-8">
-          <li><a href="#about" className="text-sm text-apple-black/80 hover:text-apple-black transition-colors">О курсе</a></li>
-          <li><a href="#program" className="text-sm text-apple-black/80 hover:text-apple-black transition-colors">Программа</a></li>
-          <li><a href="#pricing" className="text-sm text-apple-black/80 hover:text-apple-black transition-colors">Тарифы</a></li>
-          <li><a href="#audience" className="text-sm text-apple-black/80 hover:text-apple-black transition-colors">Для кого</a></li>
-        </ul>
-        <a href="#apply" className="bg-apple-blue text-white px-5 py-2 rounded-full text-sm hover:bg-blue-600 transition-all hover:scale-105">Записаться</a>
-      </div>
-    </nav>
-  );
-}
-</file>
-
-<file path="app/components/Pricing.jsx">
-export default function Pricing() {
-  return (
-    <section id="pricing" className="py-24 bg-apple-light-gray">
-      <div className="max-w-7xl mx-auto px-6">
-        <p className="text-center text-apple-gray text-xl mb-2">Тарифы</p>
-        <h2 className="text-center text-5xl font-semibold mb-16">Выберите подходящий пакет</h2>
-        
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-          {/* Вуайерист */}
-          <div className="bg-white/80 backdrop-blur-sm rounded-3xl p-8 text-center transition-all duration-300 border border-gray-100 hover:scale-[1.02] hover:shadow-lg">
-            <h3 className="text-2xl font-semibold mb-3 text-apple-black">Вуайерист</h3>
-            <p className="text-apple-gray mb-8">Доступ в чат участников</p>
-            <div className="text-5xl font-bold mb-8 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">2 990₽</div>
-            <ul className="text-left my-8 space-y-3">
-              <li className="flex items-center text-apple-black">
-                <span className="w-5 h-5 bg-green-500 rounded-full flex items-center justify-center text-white text-xs mr-3">✓</span>
-                Записи всех лекций
-              </li>
-              <li className="flex items-center text-apple-black">
-                <span className="w-5 h-5 bg-green-500 rounded-full flex items-center justify-center text-white text-xs mr-3">✓</span>
-                Закрытый чат участников
-              </li>
-              <li className="flex items-center text-apple-black">
-                <span className="w-5 h-5 bg-green-500 rounded-full flex items-center justify-center text-white text-xs mr-3">✓</span>
-                Материалы и шаблоны
-              </li>
-            </ul>
-            <a href="#apply" className="block w-full py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-2xl text-lg font-medium hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl">Выбрать</a>
-          </div>
-          
-          {/* Вайбкодер */}
-          <div className="bg-white rounded-3xl p-8 text-center border-2 border-blue-600 relative scale-105 shadow-xl transition-all duration-300 hover:scale-[1.07] hover:shadow-2xl">
-            <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2 rounded-full text-sm font-medium">Популярный</div>
-            <h3 className="text-2xl font-semibold mb-3 text-apple-black">Вайбкодер</h3>
-            <div className="text-5xl font-bold mb-8 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">11 991₽</div>
-            <ul className="text-left my-8 space-y-3">
-              <li className="flex items-center text-apple-black">
-                <span className="w-5 h-5 bg-green-500 rounded-full flex items-center justify-center text-white text-xs mr-3">✓</span>
-                Всё из предыдущего пакета
-              </li>
-              <li className="flex items-center text-apple-black">
-                <span className="w-5 h-5 bg-green-500 rounded-full flex items-center justify-center text-white text-xs mr-3">✓</span>
-                Моя поддержка
-              </li>
-              <li className="flex items-center text-apple-black">
-                <span className="w-5 h-5 bg-green-500 rounded-full flex items-center justify-center text-white text-xs mr-3">✓</span>
-                Разбор ваших проектов
-              </li>
-              <li className="flex items-center text-apple-black">
-                <span className="w-5 h-5 bg-green-500 rounded-full flex items-center justify-center text-white text-xs mr-3">✓</span>
-                Дополнительные материалы
-              </li>
-            </ul>
-            <a href="#apply" className="block w-full py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-2xl text-lg font-medium hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl">Выбрать</a>
-          </div>
-          
-          {/* Визионер */}
-          <div className="bg-white/80 backdrop-blur-sm rounded-3xl p-8 text-center transition-all duration-300 border border-gray-100 hover:scale-[1.02] hover:shadow-lg">
-            <h3 className="text-2xl font-semibold mb-3 text-apple-black">Визионер</h3>
-            <p className="text-apple-gray mb-8">Личные созвоны в удобное время</p>
-            <div className="text-5xl font-bold mb-8 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">23 992₽</div>
-            <ul className="text-left my-8 space-y-3">
-              <li className="flex items-center text-apple-black">
-                <span className="w-5 h-5 bg-green-500 rounded-full flex items-center justify-center text-white text-xs mr-3">✓</span>
-                Всё из предыдущих пакетов
-              </li>
-              <li className="flex items-center text-apple-black">
-                <span className="w-5 h-5 bg-green-500 rounded-full flex items-center justify-center text-white text-xs mr-3">✓</span>
-                Четыре созвона 1 на 1
-              </li>
-              <li className="flex items-center text-apple-black">
-                <span className="w-5 h-5 bg-green-500 rounded-full flex items-center justify-center text-white text-xs mr-3">✓</span>
-                Разбираем твою идею и вайбкодим ее вместе
-              </li>
-              <li className="flex items-center text-apple-black">
-                <span className="w-5 h-5 bg-green-500 rounded-full flex items-center justify-center text-white text-xs mr-3">✓</span>
-                Гибкое расписание
-              </li>
-            </ul>
-            <a href="#apply" className="block w-full py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-2xl text-lg font-medium hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl">Выбрать</a>
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-}
-</file>
-
-<file path="app/components/Program.jsx">
-'use client';
-
-import AccordionItem from './AccordionItem';
-
-export default function Program() {
-  return (
-    <section id="program" className="py-20">
-      <div className="max-w-4xl mx-auto px-6">
-        <p className="text-center text-apple-gray text-xl mb-2">Чему ты научишься</p>
-        <h2 className="text-center text-5xl font-semibold mb-16">Программа интенсива</h2>
-        
-        <div className="space-y-4">
-          <AccordionItem title="Модуль 1. Основы Вайб-кодинга и знакомство с AI">
-            <p className="mb-4">Поймёте, что такое генеративный ИИ и как он помогает в разработке. Научитесь быстро создавать базовые сайты и интерактивные элементы с помощью ChatGPT, Claude и Google AI Studio.</p>
-            <p className="mb-5"><strong className="text-apple-black">Инструменты:</strong> ChatGPT, Claude, Google AI Studio, Netlify Drop.</p>
-            <ul className="space-y-2 pl-5">
-              <li className="flex items-start"><span className="w-2 h-2 bg-apple-blue rounded-full mt-2 mr-3 flex-shrink-0"></span>Введение в Вайб-кодинг. Эволюция программирования.</li>
-              <li className="flex items-start"><span className="w-2 h-2 bg-apple-blue rounded-full mt-2 mr-3 flex-shrink-0"></span>Обзор основных LLM для генерации кода.</li>
-              <li className="flex items-start"><span className="w-2 h-2 bg-apple-blue rounded-full mt-2 mr-3 flex-shrink-0"></span>Первый сайт за 5 минут: практика с AI.</li>
-              <li className="flex items-start"><span className="w-2 h-2 bg-apple-blue rounded-full mt-2 mr-3 flex-shrink-0"></span>Основы промпт-инжиниринга для веб-разработки.</li>
-              <li className="flex items-start"><span className="w-2 h-2 bg-apple-blue rounded-full mt-2 mr-3 flex-shrink-0"></span>Публикация вашего первого AI-сайта.</li>
-            </ul>
-          </AccordionItem>
-
-          <AccordionItem title="Модуль 2. Итеративная разработка и интерактивность">
-            <p className="mb-4">Научитесь дорабатывать и улучшать сгенерированные сайты через диалог с AI. Разберетесь, как добавлять интерактивные элементы, анимации, работать с изображениями и стилями.</p>
-            <p className="mb-5"><strong className="text-apple-black">Ключевые навыки:</strong> Уточнение запросов, добавление CSS и JavaScript через AI, работа с SVG и эмодзи.</p>
-            <ul className="space-y-2 pl-5">
-              <li className="flex items-start"><span className="w-2 h-2 bg-apple-blue rounded-full mt-2 mr-3 flex-shrink-0"></span>"Добавь фишку": итеративное улучшение сайта.</li>
-              <li className="flex items-start"><span className="w-2 h-2 bg-apple-blue rounded-full mt-2 mr-3 flex-shrink-0"></span>Работа с изображениями: ссылки, SVG, эмодзи.</li>
-              <li className="flex items-start"><span className="w-2 h-2 bg-apple-blue rounded-full mt-2 mr-3 flex-shrink-0"></span>Стилизация через AI: от "стиля Apple" до кастомных тем.</li>
-              <li className="flex items-start"><span className="w-2 h-2 bg-apple-blue rounded-full mt-2 mr-3 flex-shrink-0"></span>Добавление JavaScript-интерактивности.</li>
-              <li className="flex items-start"><span className="w-2 h-2 bg-apple-blue rounded-full mt-2 mr-3 flex-shrink-0"></span>Разбор кейсов: создание сложных элементов.</li>
-            </ul>
-          </AccordionItem>
-
-          <AccordionItem title="Модуль 3. Создание Telegram-бота с помощью AI">
-            <p className="mb-4">Научитесь создавать полноценного Telegram-бота с помощью AI инструментов. От простых команд до интеллектуального взаимодействия с пользователями — всё без написания кода вручную.</p>
-            <p className="mb-5"><strong className="text-apple-black">Инструменты:</strong> ChatGPT/Claude для генерации кода, Telegram Bot API, хостинг-платформы для запуска бота.</p>
-            <ul className="space-y-2 pl-5">
-              <li className="flex items-start"><span className="w-2 h-2 bg-apple-blue rounded-full mt-2 mr-3 flex-shrink-0"></span>Создание бота в Telegram: получение токена и настройка.</li>
-              <li className="flex items-start"><span className="w-2 h-2 bg-apple-blue rounded-full mt-2 mr-3 flex-shrink-0"></span>Генерация базового функционала бота с помощью AI.</li>
-              <li className="flex items-start"><span className="w-2 h-2 bg-apple-blue rounded-full mt-2 mr-3 flex-shrink-0"></span>Добавление команд, обработка сообщений и inline-кнопок.</li>
-              <li className="flex items-start"><span className="w-2 h-2 bg-apple-blue rounded-full mt-2 mr-3 flex-shrink-0"></span>Интеграция с внешними API и сервисами.</li>
-              <li className="flex items-start"><span className="w-2 h-2 bg-apple-blue rounded-full mt-2 mr-3 flex-shrink-0"></span>Деплой бота на бесплатные хостинг-платформы.</li>
-            </ul>
-          </AccordionItem>
-        </div>
-      </div>
-    </section>
-  );
-}
-</file>
-
-<file path=".gitignore">
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
-
-# dependencies
-/node_modules
-/.pnp
-.pnp.*
-.yarn/*
-!.yarn/patches
-!.yarn/plugins
-!.yarn/releases
-!.yarn/versions
-
-# testing
-/coverage
-
-# next.js
-/.next/
-/out/
-
-# production
-/build
-
-# misc
-.DS_Store
-*.pem
-
-# debug
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-.pnpm-debug.log*
-
-# env files (can opt-in for committing if needed)
-.env*
-
-# vercel
-.vercel
-
-# typescript
-*.tsbuildinfo
-next-env.d.ts
 </file>
 
 <file path="CLAUDE.md">
@@ -652,12 +397,354 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
 </file>
 
+<file path="app/components/AccordionItem.jsx">
+'use client';
+
+export default function AccordionItem({ title, children, isOpen, onClick }) {
+  return (
+    <div className="border-b border-gray-200 pb-6">
+      <div 
+        className="flex justify-between items-center cursor-pointer py-4 hover:text-apple-blue transition-colors" 
+        onClick={onClick}
+      >
+        <h3 className="text-xl md:text-2xl font-medium">{title}</h3>
+        <span 
+          className="text-2xl text-apple-gray transition-transform duration-300" 
+          style={{ transform: isOpen ? 'rotate(45deg)' : 'rotate(0deg)' }}
+        >
+          +
+        </span>
+      </div>
+      <div 
+        className="overflow-hidden transition-all duration-300"
+        style={{ maxHeight: isOpen ? '1000px' : '0' }}
+      >
+        <div className="pt-4 text-apple-gray leading-relaxed">
+          {children}
+        </div>
+      </div>
+    </div>
+  );
+}
+</file>
+
+<file path="app/components/CTA.jsx">
+export default function CTA() {
+  return (
+    <section id="apply" className="py-24 bg-gradient-to-br from-blue-600 via-purple-600 to-blue-700 text-white text-center relative overflow-hidden">
+      <div className="absolute inset-0">
+        <div className="absolute inset-0 bg-black/20"></div>
+        <div className="absolute top-20 left-20 w-72 h-72 bg-white/10 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-20 right-20 w-96 h-96 bg-white/5 rounded-full blur-3xl"></div>
+      </div>
+      
+      <div className="max-w-3xl mx-auto px-6 relative z-10">
+        <h2 className="text-5xl md:text-6xl font-semibold mb-6">Начни создавать с AI уже сегодня</h2>
+        <p className="text-xl md:text-2xl mb-12 opacity-90 leading-relaxed">
+          Тысячи людей уже изменили свою жизнь с помощью вайб-кодинга. 
+          Присоединяйся к революции в разработке и создавай проекты мечты с помощью искусственного интеллекта.
+        </p>
+        
+        <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-8">
+          <a 
+            href="https://t.me/hashslash_bot" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="bg-white text-apple-blue px-8 py-4 rounded-2xl text-lg font-semibold hover:-translate-y-1 transition-all hover:shadow-2xl hover:shadow-white/25"
+          >
+            Записаться на интенсив
+          </a>
+          <a 
+            href="#lead-magnet" 
+            className="border-2 border-white/50 text-white px-8 py-4 rounded-2xl text-lg font-semibold hover:bg-white/10 transition-all"
+          >
+            Получить бесплатный гайд
+          </a>
+        </div>
+        
+        <div className="text-center">
+          <p className="text-lg opacity-75 mb-4">Есть вопросы?</p>
+          <a 
+            href="https://t.me/r1iiis" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="text-xl font-semibold hover:underline transition-all"
+          >
+            Напиши мне в Telegram @r1iiis
+          </a>
+        </div>
+      </div>
+    </section>
+  );
+}
+</file>
+
+<file path="app/components/Footer.jsx">
+export default function Footer() {
+  return (
+    <footer className="bg-apple-light-gray py-16">
+      <div className="max-w-6xl mx-auto px-6">
+        <div className="grid md:grid-cols-4 gap-10 mb-10">
+          <div>
+            <h5 className="text-sm font-semibold mb-4 text-apple-black">Вайб-кодинг с AI</h5>
+            <p className="text-apple-gray text-sm leading-relaxed">Создавай будущее веб-разработки вместе с нами. Изучай современные AI-инструменты и воплощай идеи в жизнь.</p>
+          </div>
+          <div>
+            <h5 className="text-sm font-semibold mb-4 text-apple-black">Навигация</h5>
+            <ul className="space-y-3">
+              <li><a href="#testimonials" className="text-apple-gray text-sm hover:text-apple-blue transition-colors">Отзывы</a></li>
+              <li><a href="#program" className="text-apple-gray text-sm hover:text-apple-blue transition-colors">Программа</a></li>
+              <li><a href="#pricing" className="text-apple-gray text-sm hover:text-apple-blue transition-colors">Тарифы</a></li>
+              <li><a href="#lead-magnet" className="text-apple-gray text-sm hover:text-apple-blue transition-colors">Бесплатный гайд</a></li>
+            </ul>
+          </div>
+          <div>
+            <h5 className="text-sm font-semibold mb-4 text-apple-black">Мои ресурсы</h5>
+            <ul className="space-y-3">
+              <li><a href="https://t.me/r1iiis" target="_blank" rel="noopener noreferrer" className="text-apple-gray text-sm hover:text-apple-blue transition-colors">Личный блог в Telegram</a></li>
+              <li><a href="https://t.me/hashslash_bot" target="_blank" rel="noopener noreferrer" className="text-apple-gray text-sm hover:text-apple-blue transition-colors">Бот для записи</a></li>
+              <li><a href="https://github.com/riiiiiiiiis" target="_blank" rel="noopener noreferrer" className="text-apple-gray text-sm hover:text-apple-blue transition-colors">GitHub</a></li>
+            </ul>
+          </div>
+          <div>
+            <h5 className="text-sm font-semibold mb-4 text-apple-black">Правовая информация</h5>
+            <ul className="space-y-3">
+              <li><a href="#" className="text-apple-gray text-sm hover:text-apple-blue transition-colors">Политика конфиденциальности</a></li>
+              <li><a href="#" className="text-apple-gray text-sm hover:text-apple-blue transition-colors">Пользовательское соглашение</a></li>
+              <li><a href="#" className="text-apple-gray text-sm hover:text-apple-blue transition-colors">Публичная оферта</a></li>
+            </ul>
+          </div>
+        </div>
+        <div className="pt-10 border-t border-gray-200 text-center">
+          <p className="text-apple-gray text-sm">© 2025 Вайб-кодинг с AI. Все права защищены.<br />
+          Сделано с ❤️ для сообщества разработчиков</p>
+        </div>
+      </div>
+    </footer>
+  );
+}
+</file>
+
+<file path="app/components/Hero.jsx">
+export default function Hero() {
+  return (
+    <section className="pt-32 pb-20 text-center bg-gradient-to-b from-white to-apple-light-gray">
+      <div className="max-w-4xl mx-auto px-6">
+        <h1 className="text-6xl md:text-7xl font-semibold mb-6 bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent leading-tight">Вайб-кодинг с AI</h1>
+        <p className="text-2xl md:text-3xl text-apple-gray mb-10 leading-relaxed max-w-3xl mx-auto">Создавай сайты и Telegram-ботов в чате с нейросетью. Даже если никогда не писал код!</p>
+        <a href="#lead-magnet" className="inline-block bg-apple-blue text-white px-8 py-4 rounded-full text-lg hover:bg-blue-600 transition-all hover:-translate-y-1 shadow-lg hover:shadow-xl hover:shadow-blue-200 mb-6">Начать бесплатно</a>
+        <p className="text-lg text-apple-gray">
+          или <a href="#program" className="text-apple-blue hover:underline font-medium">посмотрите программу курса</a>
+        </p>
+      </div>
+    </section>
+  );
+}
+</file>
+
+<file path="app/components/Navbar.jsx">
+export default function Navbar() {
+  return (
+    <nav className="fixed top-0 w-full backdrop-blur-md bg-white/80 z-50 border-b border-gray-200/80">
+      <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+        <a href="#" className="text-xl font-semibold text-apple-black">Вайб-кодинг</a>
+        <ul className="hidden md:flex space-x-8">
+          <li><a href="#testimonials" className="text-sm text-apple-black/80 hover:text-apple-black transition-colors">Отзывы</a></li>
+          <li><a href="#program" className="text-sm text-apple-black/80 hover:text-apple-black transition-colors">Программа</a></li>
+          <li><a href="#pricing" className="text-sm text-apple-black/80 hover:text-apple-black transition-colors">Тарифы</a></li>
+        </ul>
+        <a href="#pricing" className="bg-apple-blue text-white px-5 py-2 rounded-full text-sm hover:bg-blue-600 transition-all hover:scale-105">Записаться</a>
+      </div>
+    </nav>
+  );
+}
+</file>
+
+<file path="app/components/Pricing.jsx">
+export default function Pricing() {
+  return (
+    <section id="pricing" className="py-24 bg-white">
+      <div className="max-w-7xl mx-auto px-6">
+        <p className="text-center text-apple-gray text-xl mb-2">Тарифы</p>
+        <h2 className="text-center text-5xl font-semibold mb-16">Выберите подходящий пакет</h2>
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-6xl mx-auto items-start">
+          {/* Самостоятельный */}
+          <div className="bg-apple-light-gray/60 rounded-3xl p-8 text-center hover:scale-105 transition-transform duration-300 border border-gray-100">
+            <h3 className="text-2xl font-semibold mb-3 text-apple-black">Самостоятельный</h3>
+            <p className="text-apple-gray mb-8 h-12">Доступ к лекциям и общему чату</p>
+            <div className="text-5xl font-bold mb-8 text-apple-black">2 990₽</div>
+            <ul className="text-left my-8 space-y-3">
+              <li className="flex items-center text-apple-black"><span className="text-green-500 mr-3">✓</span>Записи всех лекций</li>
+              <li className="flex items-center text-apple-black"><span className="text-green-500 mr-3">✓</span>Закрытый чат участников</li>
+              <li className="flex items-center text-apple-black"><span className="text-green-500 mr-3">✓</span>Материалы и шаблоны</li>
+            </ul>
+            <a href="https://t.me/hashslash_bot" target="_blank" className="w-full block py-3 bg-white border border-apple-blue text-apple-blue rounded-xl text-lg font-medium hover:bg-apple-blue hover:text-white transition-all duration-200">Выбрать</a>
+          </div>
+          
+          {/* Стандартный (Popular) */}
+          <div className="bg-apple-black rounded-3xl p-8 text-center text-white relative shadow-2xl scale-105">
+            <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2 rounded-full text-sm font-medium">Популярный</div>
+            <h3 className="text-2xl font-semibold mb-3">Стандартный</h3>
+            <p className="text-white/70 mb-8 h-12">С моей поддержкой и разбором проектов в мини-группе</p>
+            <div className="text-5xl font-bold mb-8 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">12 000₽</div>
+            <ul className="text-left my-8 space-y-3">
+              <li className="flex items-center"><span className="text-green-400 mr-3">✓</span><strong>Всё из тарифа "Самостоятельный"</strong></li>
+              <li className="flex items-center"><span className="text-green-400 mr-3">✓</span>Моя личная поддержка в чате</li>
+              <li className="flex items-center"><span className="text-green-400 mr-3">✓</span>Разбор ваших проектов в группе</li>
+              <li className="flex items-center"><span className="text-green-400 mr-3">✓</span>Дополнительные мастер-классы</li>
+            </ul>
+            <a href="https://t.me/hashslash_bot" target="_blank" className="w-full block py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-xl text-lg font-medium hover:scale-105 transition-transform duration-200">Выбрать стандартный</a>
+          </div>
+          
+          {/* VIP */}
+          <div className="bg-apple-light-gray/60 rounded-3xl p-8 text-center hover:scale-105 transition-transform duration-300 border border-gray-100">
+            <h3 className="text-2xl font-semibold mb-3 text-apple-black">VIP</h3>
+            <p className="text-apple-gray mb-8 h-12">Личные созвоны и консультации</p>
+            <div className="text-5xl font-bold mb-8 text-apple-black">24 000₽</div>
+            <ul className="text-left my-8 space-y-3">
+              <li className="flex items-center text-apple-black"><span className="text-green-500 mr-3">✓</span><strong>Всё из тарифа "Стандартный"</strong></li>
+              <li className="flex items-center text-apple-black"><span className="text-green-500 mr-3">✓</span>Личные созвоны со мной (2 шт)</li>
+              <li className="flex items-center text-apple-black"><span className="text-green-500 mr-3">✓</span>Индивидуальные консультации</li>
+              <li className="flex items-center text-apple-black"><span className="text-green-500 mr-3">✓</span>Помощь в реализации вашего проекта</li>
+            </ul>
+             <a href="https://t.me/hashslash_bot" target="_blank" className="w-full block py-3 bg-white border border-apple-blue text-apple-blue rounded-xl text-lg font-medium hover:bg-apple-blue hover:text-white transition-all duration-200">Выбрать</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  )
+}
+</file>
+
+<file path="app/components/Program.jsx">
+'use client';
+
+import { useState } from 'react';
+import AccordionItem from './AccordionItem';
+
+export default function Program() {
+  const [openIndex, setOpenIndex] = useState(null);
+
+  const accordionData = [
+    {
+      title: "Модуль 1. Основы вайб-кодинга с AI",
+      content: (
+        <div>
+          <p className="mb-4">Знакомство с AI-инструментами для веб-разработки. Создаем первый сайт за 15 минут.</p>
+          <ul className="space-y-2 pl-5">
+            <li className="flex items-start"><span className="w-2 h-2 bg-apple-blue rounded-full mt-2 mr-3 flex-shrink-0"></span>Введение в ChatGPT, Claude и Google AI Studio</li>
+            <li className="flex items-start"><span className="w-2 h-2 bg-apple-blue rounded-full mt-2 mr-3 flex-shrink-0"></span>Создание первого сайта через чат с AI</li>
+            <li className="flex items-start"><span className="w-2 h-2 bg-apple-blue rounded-full mt-2 mr-3 flex-shrink-0"></span>Публикация на Netlify Drop</li>
+          </ul>
+        </div>
+      )
+    },
+    {
+      title: "Модуль 2. Продвинутые техники и стилизация", 
+      content: (
+        <div>
+          <p className="mb-4">Учимся улучшать дизайн, добавлять интерактивность и создавать адаптивные интерфейсы.</p>
+          <ul className="space-y-2 pl-5">
+            <li className="flex items-start"><span className="w-2 h-2 bg-apple-blue rounded-full mt-2 mr-3 flex-shrink-0"></span>Стилизация с помощью AI</li>
+            <li className="flex items-start"><span className="w-2 h-2 bg-apple-blue rounded-full mt-2 mr-3 flex-shrink-0"></span>Добавление JavaScript-функций</li>
+            <li className="flex items-start"><span className="w-2 h-2 bg-apple-blue rounded-full mt-2 mr-3 flex-shrink-0"></span>Работа с изображениями и медиа</li>
+          </ul>
+        </div>
+      )
+    },
+    {
+      title: "Модуль 3. Создание Telegram-ботов",
+      content: (
+        <div>
+          <p className="mb-4">Разрабатываем полноценного Telegram-бота с нуля, используя только AI-инструменты.</p>
+          <ul className="space-y-2 pl-5">
+            <li className="flex items-start"><span className="w-2 h-2 bg-apple-blue rounded-full mt-2 mr-3 flex-shrink-0"></span>Настройка бота в Telegram</li>
+            <li className="flex items-start"><span className="w-2 h-2 bg-apple-blue rounded-full mt-2 mr-3 flex-shrink-0"></span>Программирование команд через AI</li>
+            <li className="flex items-start"><span className="w-2 h-2 bg-apple-blue rounded-full mt-2 mr-3 flex-shrink-0"></span>Деплой и тестирование</li>
+          </ul>
+        </div>
+      )
+    }
+  ];
+
+  return (
+    <section id="program" className="py-20">
+      <div className="max-w-4xl mx-auto px-6">
+        <p className="text-center text-apple-gray text-xl mb-2">Чему ты научишься</p>
+        <h2 className="text-center text-5xl font-semibold mb-16">Программа интенсива</h2>
+        
+        <div className="bg-white rounded-2xl p-2">
+          <div className="space-y-0">
+            {accordionData.map((item, index) => (
+              <AccordionItem
+                key={index}
+                title={item.title}
+                isOpen={openIndex === index}
+                onClick={() => setOpenIndex(openIndex === index ? null : index)}
+              >
+                {item.content}
+              </AccordionItem>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+</file>
+
+<file path=".gitignore">
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/node_modules
+/.pnp
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
+
+# testing
+/coverage
+
+# next.js
+/.next/
+/out/
+
+# production
+/build
+
+# misc
+.DS_Store
+*.pem
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# env files (can opt-in for committing if needed)
+.env*
+
+# vercel
+.vercel
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
+
+repomix-output.xml
+</file>
+
 <file path="app/globals.css">
 @import "tailwindcss";
 
 @theme {
   --color-apple-black: #1d1d1f;
-  --color-apple-gray: #86868b;
+  --color-apple-gray: #6e6e73;
   --color-apple-light-gray: #f5f5f7;
   --color-apple-blue: #0071e3;
   
@@ -674,26 +761,18 @@ import "./globals.css";
 const structuredData = {
   "@context": "https://schema.org",
   "@type": "Course",
-  "name": "Вайб-кодинг с AI: Создание сайтов и Telegram-ботов",
-  "description": "3-недельный практический интенсив по созданию веб-сайтов и Telegram-ботов с помощью AI инструментов",
-  "provider": { "@type": "Person", "name": "Сережа Рис", "url": "https://t.me/r1iiis" },
+  "name": "Вайб-кодинг с AI",
+  "description": "Практический интенсив по созданию сайтов и Telegram-ботов с помощью AI",
+  "provider": { "@type": "Person", "name": "Сережа Рис" },
   "instructor": { "@type": "Person", "name": "Сережа Рис" },
   "courseMode": "online",
-  "educationalLevel": "Beginner",
-  "teaches": ["Создание сайтов с помощью AI", "Разработка Telegram-ботов", "Работа с ChatGPT и Claude", "Промпт-инжиниринг"],
-  "startDate": "2024-05-30",
-  "duration": "P21D",
-  "offers": [
-    { "@type": "Offer", "price": "2990", "priceCurrency": "RUB", "name": "Самостоятельный" },
-    { "@type": "Offer", "price": "12000", "priceCurrency": "RUB", "name": "Стандартный" },
-    { "@type": "Offer", "price": "24000", "priceCurrency": "RUB", "name": "VIP" }
-  ]
+  "educationalLevel": "Beginner"
 };
 
 export const metadata = {
   title: "Вайб-кодинг с AI: Создавай сайты и Telegram-ботов в чате с ИИ | Сережа Рис",
-  description: "3-недельный интенсив с Сережей Рисом. Создавай сайты и Telegram-ботов через чат с AI. Старт 30 мая. 3 практические лекции. Без опыта программирования.",
-  keywords: ["AI", "вайб-кодинг", "создание сайтов", "telegram бот", "ChatGPT", "Claude", "веб-разработка", "без кода", "Сережа Рис", "интенсив"],
+  description: "Научись создавать сайты и Telegram-ботов через чат с AI. Практический интенсив от Сережи Риса для начинающих. Получи бесплатный гайд и начни кодить уже сегодня!",
+  keywords: ["AI", "вайб-кодинг", "создание сайтов", "telegram бот", "ChatGPT", "Claude", "веб-разработка", "без кода", "Сережа Рис", "интенсив", "обучение ИИ"],
   author: [{ name: "Сережа Рис" }],
   robots: "index, follow",
   themeColor: "#0071e3",
@@ -703,7 +782,7 @@ export const metadata = {
     type: "website",
     url: "https://school.hsl.sh/",
     title: "Вайб-кодинг с AI: Создавай сайты и Telegram-ботов в чате с ИИ",
-    description: "3-недельный интенсив с Сережей Рисом. Создавай сайты и Telegram-ботов через чат с AI. Старт 30 мая. Без опыта программирования.",
+    description: "Научись создавать сайты и Telegram-ботов через чат с AI. Практический интенсив от Сережи Риса для начинающих.",
     images: [{ url: "https://school.hsl.sh/og-image.jpg", width: 1200, height: 630 }],
     siteName: "Вайб-кодинг с AI",
     locale: "ru_RU",
@@ -712,7 +791,7 @@ export const metadata = {
     card: "summary_large_image",
     url: "https://school.hsl.sh/",
     title: "Вайб-кодинг с AI: Создавай сайты и Telegram-ботов в чате с ИИ",
-    description: "3-недельный интенсив с Сережей Рисом. Создавай сайты и Telegram-ботов через чат с AI. Старт 30 мая.",
+    description: "Научись создавать сайты и Telegram-ботов через чат с AI. Практический интенсив от Сережи Риса для начинающих.",
     images: ["https://school.hsl.sh/og-image.jpg"],
     creator: "@r1iiis",
   },
@@ -748,11 +827,11 @@ export default function RootLayout({ children }) {
 // app/page.js
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
-import About from './components/About';
+import LeadMagnet from './components/LeadMagnet';
+import Testimonials from './components/Testimonials';
+import StudentProjects from './components/StudentProjects';
 import Program from './components/Program';
 import Pricing from './components/Pricing';
-import Audience from './components/Audience';
-import FAQ from './components/FAQ';
 import CTA from './components/CTA';
 import Footer from './components/Footer';
 
@@ -762,11 +841,11 @@ export default function Home() {
       <Navbar />
       <main>
         <Hero />
-        <About />
+        <LeadMagnet />
+        <Testimonials />
+        <StudentProjects />
         <Program />
         <Pricing />
-        <Audience />
-        <FAQ />
         <CTA />
       </main>
       <Footer />
