@@ -8,40 +8,57 @@ export default function Program() {
 
   const accordionData = [
     {
-      title: "Модуль 1. Основы вайб-кодинга с AI",
+      title: "Модуль 1. Основы вайб-кодинга: от идеи до сайта за 5 минут",
       content: (
         <div>
-          <p className="mb-4">Знакомство с AI-инструментами для веб-разработки. Создаем первый сайт за 15 минут.</p>
+          <p className="mb-4">Создаем мощный «вау-эффект», доказывая ценность подхода. Публикуем первый сайт моментально.</p>
           <ul className="space-y-2 pl-5">
-            <li className="flex items-start"><span className="w-2 h-2 bg-apple-blue rounded-full mt-2 mr-3 flex-shrink-0"></span>Введение в ChatGPT, Claude и Google AI Studio</li>
-            <li className="flex items-start"><span className="w-2 h-2 bg-apple-blue rounded-full mt-2 mr-3 flex-shrink-0"></span>Создание первого сайта через чат с AI</li>
-            <li className="flex items-start"><span className="w-2 h-2 bg-apple-blue rounded-full mt-2 mr-3 flex-shrink-0"></span>Публикация на Netlify Drop</li>
+            <li className="flex items-start"><span className="w-2 h-2 bg-apple-blue rounded-full mt-2 mr-3 flex-shrink-0"></span>Перевернутый класс: предварительное изучение «Что такое HTML и почему сайт — это просто текстовый файл?»</li>
+            <li className="flex items-start"><span className="w-2 h-2 bg-apple-blue rounded-full mt-2 mr-3 flex-shrink-0"></span>Формат «Код-реактор»: генерация сайта в прямом эфире</li>
+            <li className="flex items-start"><span className="w-2 h-2 bg-apple-blue rounded-full mt-2 mr-3 flex-shrink-0"></span>Рабочая тетрадь вайб-кодера: шаблоны промптов и чек-листы</li>
+            <li className="flex items-start"><span className="w-2 h-2 bg-apple-blue rounded-full mt-2 mr-3 flex-shrink-0"></span>Парад сайтов: делимся результатами и вдохновляемся</li>
           </ul>
         </div>
       )
     },
     {
-      title: "Модуль 2. Продвинутые техники и стилизация", 
+      title: "Модуль 2. Продвинутый промпт-инжиниринг и AI-исследования", 
       content: (
         <div>
-          <p className="mb-4">Учимся улучшать дизайн, добавлять интерактивность и создавать адаптивные интерфейсы.</p>
+          <p className="mb-4">Переходим от магии к ремеслу. Создаем «Цифровой двойник» существующего сайта.</p>
           <ul className="space-y-2 pl-5">
-            <li className="flex items-start"><span className="w-2 h-2 bg-apple-blue rounded-full mt-2 mr-3 flex-shrink-0"></span>Стилизация с помощью AI</li>
-            <li className="flex items-start"><span className="w-2 h-2 bg-apple-blue rounded-full mt-2 mr-3 flex-shrink-0"></span>Добавление JavaScript-функций</li>
-            <li className="flex items-start"><span className="w-2 h-2 bg-apple-blue rounded-full mt-2 mr-3 flex-shrink-0"></span>Работа с изображениями и медиа</li>
+            <li className="flex items-start"><span className="w-2 h-2 bg-apple-blue rounded-full mt-2 mr-3 flex-shrink-0"></span>Фреймворк К.О.Р.Т.: Контекст, Ответственность, Роль, Требование</li>
+            <li className="flex items-start"><span className="w-2 h-2 bg-apple-blue rounded-full mt-2 mr-3 flex-shrink-0"></span>Декомпозиция проекта: извлечение данных, сбор визуального контекста</li>
+            <li className="flex items-start"><span className="w-2 h-2 bg-apple-blue rounded-full mt-2 mr-3 flex-shrink-0"></span>Написание мастер-промпта для создания цифрового двойника</li>
+            <li className="flex items-start"><span className="w-2 h-2 bg-apple-blue rounded-full mt-2 mr-3 flex-shrink-0"></span>Анализ и оптимизация результатов генерации</li>
           </ul>
         </div>
       )
     },
     {
-      title: "Модуль 3. Создание Telegram-ботов",
+      title: "Модуль 3. Архитектура веба и создание первого Telegram-бота",
       content: (
         <div>
-          <p className="mb-4">Разрабатываем полноценного Telegram-бота с нуля, используя только AI-инструменты.</p>
+          <p className="mb-4">Знакомимся с бэкендом. Создаем эхо-бота — идеальный «Hello, World!» для серверной логики.</p>
           <ul className="space-y-2 pl-5">
-            <li className="flex items-start"><span className="w-2 h-2 bg-apple-blue rounded-full mt-2 mr-3 flex-shrink-0"></span>Настройка бота в Telegram</li>
-            <li className="flex items-start"><span className="w-2 h-2 bg-apple-blue rounded-full mt-2 mr-3 flex-shrink-0"></span>Программирование команд через AI</li>
-            <li className="flex items-start"><span className="w-2 h-2 bg-apple-blue rounded-full mt-2 mr-3 flex-shrink-0"></span>Деплой и тестирование</li>
+            <li className="flex items-start"><span className="w-2 h-2 bg-apple-blue rounded-full mt-2 mr-3 flex-shrink-0"></span>Визуальная метафора «кофемашины»: путь данных через интерактивную схему</li>
+            <li className="flex items-start"><span className="w-2 h-2 bg-apple-blue rounded-full mt-2 mr-3 flex-shrink-0"></span>Создание токена в BotFather и настройка credentials</li>
+            <li className="flex items-start"><span className="w-2 h-2 bg-apple-blue rounded-full mt-2 mr-3 flex-shrink-0"></span>Перевернутое знакомство с n8n: от логики к интерфейсу</li>
+            <li className="flex items-start"><span className="w-2 h-2 bg-apple-blue rounded-full mt-2 mr-3 flex-shrink-0"></span>Словарь данных: разбор JSON и путь message.chat.id</li>
+          </ul>
+        </div>
+      )
+    },
+    {
+      title: "Модуль 4. Интеграция AI: Создание умного чат-бота",
+      content: (
+        <div>
+          <p className="mb-4">Кульминация курса. Объединяем все навыки в проекте «Бот с характером».</p>
+          <ul className="space-y-2 pl-5">
+            <li className="flex items-start"><span className="w-2 h-2 bg-apple-blue rounded-full mt-2 mr-3 flex-shrink-0"></span>Методология отладки О.Ш.И.Б.К.А.: системный подход к решению проблем</li>
+            <li className="flex items-start"><span className="w-2 h-2 bg-apple-blue rounded-full mt-2 mr-3 flex-shrink-0"></span>UX для ботов: обратная связь и индикация «думающего» бота</li>
+            <li className="flex items-start"><span className="w-2 h-2 bg-apple-blue rounded-full mt-2 mr-3 flex-shrink-0"></span>Настройка системного промпта и создание уникального характера</li>
+            <li className="flex items-start"><span className="w-2 h-2 bg-apple-blue rounded-full mt-2 mr-3 flex-shrink-0"></span>Peer-review сессия «Угадай персону»: геймификация финального проекта</li>
           </ul>
         </div>
       )
