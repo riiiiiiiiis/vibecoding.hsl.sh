@@ -7,11 +7,6 @@ export default function Testimonials() {
         <div className="grid md:grid-cols-3 gap-8">
           <div className="bg-apple-light-gray rounded-3xl p-8 hover:-translate-y-2 transition-all duration-300">
             <div className="mb-6">
-              <div className="flex items-center gap-1 mb-4">
-                {[...Array(5)].map((_, i) => (
-                  <span key={i} className="text-yellow-400 text-xl">★</span>
-                ))}
-              </div>
               <p className="text-apple-gray leading-relaxed mb-4">
                 "За неделю создал свой первый лендинг и Telegram-бота! Раньше думал, что программирование — это слишком сложно."
               </p>
@@ -29,11 +24,6 @@ export default function Testimonials() {
 
           <div className="bg-apple-light-gray rounded-3xl p-8 hover:-translate-y-2 transition-all duration-300">
             <div className="mb-6">
-              <div className="flex items-center gap-1 mb-4">
-                {[...Array(5)].map((_, i) => (
-                  <span key={i} className="text-yellow-400 text-xl">★</span>
-                ))}
-              </div>
               <p className="text-apple-gray leading-relaxed mb-4">
                 "Сережа объясняет так просто! Теперь я могу создавать прототипы для своих дизайнов без помощи разработчиков."
               </p>
@@ -51,11 +41,6 @@ export default function Testimonials() {
 
           <div className="bg-apple-light-gray rounded-3xl p-8 hover:-translate-y-2 transition-all duration-300">
             <div className="mb-6">
-              <div className="flex items-center gap-1 mb-4">
-                {[...Array(5)].map((_, i) => (
-                  <span key={i} className="text-yellow-400 text-xl">★</span>
-                ))}
-              </div>
               <p className="text-apple-gray leading-relaxed mb-4">
                 "Интенсив полностью изменил мое представление о разработке. Вайб-кодинг — это будущее!"
               </p>

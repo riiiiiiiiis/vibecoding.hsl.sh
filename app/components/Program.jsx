@@ -69,7 +69,8 @@ export default function Program() {
     <section id="program" className="py-20">
       <div className="max-w-4xl mx-auto px-6">
         <p className="text-center text-apple-gray text-xl mb-2">Чему ты научишься</p>
-        <h2 className="text-center text-5xl font-semibold mb-16">Программа интенсива</h2>
+        <h2 className="text-center text-5xl font-semibold mb-4">Программа интенсива</h2>
+        <p className="text-center text-apple-gray text-lg mb-16">Каждый модуль рассчитан на одну неделю обучения.</p>
         
         <div className="bg-white rounded-2xl p-2">
           <div className="space-y-0">
